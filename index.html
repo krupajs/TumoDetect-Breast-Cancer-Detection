@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/getstarted.css') }}">
+<title>
+breast cancer prediction
+</title>
+</head>
+<body>
+<div class="hero">
+	<video autoplay loop muted plays-inline class="back-video">
+		<source src="{{ url_for('static', filename='Video/bgvid.mov') }}" type="video/mp4"></source>
+	</video>
+
+<nav>
+<img src="{{ url_for('static', filename='Image/logopredict.png') }}" class="logo">
+<ul>
+<li><a href="#home">HOME</a></li>
+<li><a href="#about">FIND OUT</a></li>
+<li><a href="#contact">ABOUT US</a></li>
+</ul>
+</nav>
+<div class="content" id="home">
+<h1>Breast Cancer Predictor</h1>
+<a href="{{url_for('predict')}}">Get Started</a>
+</div>
+</div>
+<div class="about" id="about">
+<p>This site is to predict whether the cancer is in starting or malignant state</p>
+</div>
+<div class="contact" id="contact">
+<h2>Contact</h2>
+<img src="{{ url_for('static', filename='Image/contact.jpg') }}">
+</img>
+<h1>krupa,nithya</h1>
+
+</div>
+</body>
+</html>
