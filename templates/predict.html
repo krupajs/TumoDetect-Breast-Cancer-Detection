@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>predict</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/predict.css') }}">
+
+</head>
+<body>
+<div class="container">
+<video autoplay loop muted plays-inline class="back-video">
+<source src="C:\Users\srira\Downloads\d1919653-5445-4013-97fc-c5553b4d19d6.mp4" type="video/mp4">
+</video>
+
+<div class="logo">
+
+
+</div>
+<center>
+<div class="form">
+
+
+
+<h1>ENTER THE VALUES</h1>
+
+<form action="{{ url_for('prediction')}}" method="POST">
+<div class="inner">
+
+
+    <input type="text" placeholder="Radius_mean" id="radius_mean" name="radius_mean" required>
+    <input type="text" placeholder="Texture_mean"id="texture_mean"  name="texture_mean" required>
+    <input type="text" placeholder="Smoothness_mean" id="smoothness_mean" name="smoothness_mean"  required>
+    <input type="text" placeholder="compactness_mean" id="compactness_mean" name="compactness_mean" required>
+    <input type="text" placeholder="Symmetry_mean" id="symmetry_mean" name="symmetry_mean" required>
+    <input type="text" placeholder="Fractal_dimension_mean" id="fractal_dimension_mean" name="fractal_dimension_mean" required>
+    <input type="text" placeholder="Radius_se" id="radius_se" name="radius_se" required>
+    <input type="text" placeholder="Texture_se" id="texture_se" name="texture_se" required>
+    <input type="text" placeholder="Smoothness_se" id="smoothness_se" name="smoothness_se"  required>
+    <input type="text" placeholder="Compactness_se" id="compactness_se" name="compactness_se" required>
+    <input type="text" placeholder="Symmetry_se" id="symmetry_se" name="symmetry_se" required>
+    <input type="text" placeholder="Fractal_dimension_se" id="fractal_dimension_se" name="fractal_dimension_se" required>
+    <button type="Submit">Predict</button>
+
+</div>
+</form>
+<div>
+    <center>
+    <h1>{{prediction_text}}</h1></center>
+</div>
+</div></center>
+
+
+</div>
+
+</body>
+</html>
